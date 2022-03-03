@@ -1,21 +1,19 @@
 # mall-tiny
 
 <p>
-    <a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-macrozheng-blue.svg" alt="公众号"></a>
-    <a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E4%BA%A4%E6%B5%81-%E5%BE%AE%E4%BF%A1%E7%BE%A4-2BA245.svg" alt="交流"></a>    
-    <a href="https://github.com/macrozheng/mall"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
-    <a href="https://github.com/macrozheng/mall-admin-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-mall--admin--web-green.svg" alt="前端项目"></a>
+    <a href="https://github.com/superhsc/hamster"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
+    <a href="https://github.com/superhsc/mall-admin-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-mall--admin--web-green.svg" alt="前端项目"></a>
 </p>
 
 ## 简介
 
-mall-tiny是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接Vue前端，开箱即用。
+hamster 是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接 Vue 前端，开箱即用。
 
 ## 项目演示
 
-mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
+hamster 项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_09.png)
+![](images/hamster_start_09.png)
 
 ## 技术选型
 
@@ -35,17 +33,17 @@ mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理�
 
 ## 数据库表结构
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_01.png)
+![](images/hamster_start_01.png)
 
 - 化繁为简，仅保留了权限管理功能相关的9张表，方便自由定制；
 
-- 数据库源文件地址：https://github.com/macrozheng/mall-tiny/blob/master/sql/mall_tiny.sql
+[//]: # (- 数据库源文件地址：https://github.com/macrozheng/mall-tiny/blob/master/sql/mall_tiny.sql)
 
 ## 使用流程
 
 ### 环境搭建
 
-简化依赖服务，只需安装最常用的MySql和Redis服务即可，服务安装具体参考[mall在Windows环境下的部署](https://mp.weixin.qq.com/s/Q9ybpfq8IEdbZmvlaMXJdg)，数据库中需要导入`mall_tiny.sql`脚本。
+简化依赖服务，只需安装最常用的 MySql 和 Redis 服务即可，服务安装具体参考[hamster 在 Windows 环境下的部署](https://mp.weixin.qq.com/s/Q9ybpfq8IEdbZmvlaMXJdg)，数据库中需要导入`hamster.sql`脚本。
 
 ### 开发规约
 
@@ -100,50 +98,50 @@ resources
 
 - 获取指定记录详情：GET /{控制器路由名称}/{id}
 
-- 具体参数及返回结果定义可以运行代码查看Swagger-UI的Api文档：http://localhost:8080/swagger-ui.html
+- 具体参数及返回结果定义可以运行代码查看 Swagger-UI 的Api文档：http://localhost:8080/swagger-ui.html
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_02.png)
+![](images/hamster_start_02.png)
 
 ### 项目运行
 
-直接运行启动类`MallTinyApplication`的`main`函数即可。
+直接运行启动类 `MallTinyApplication` 的 `main` 函数即可。
 
 ### 业务代码开发流程
 
 #### 创建业务表
 
-> 创建好`pms`模块的所有表，需要注意的是一定要写好表字段的`注释`，这样实体类和接口文档中就会自动生成字段说明了。
+> 创建好 `pms` 模块的所有表，需要注意的是一定要写好表字段的`注释`，这样实体类和接口文档中就会自动生成字段说明了。
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_03.png)
+![](images/hamster_start_03.png)
 
 #### 使用代码生成器
 
-> 运行`MyBatisPlusGenerator`类的main方法来生成代码，可直接生成controller、service、mapper、model、mapper.xml的代码，无需手动创建。
+> 运行 `MyBatisPlusGenerator` 类的main方法来生成代码，可直接生成controller、service、mapper、model、mapper.xml的代码，无需手动创建。
 
-- 代码生成器支持两种模式，一种生成单表的代码，比如只生成`pms_brand`表代码可以先输入`pms`，后输入`pms_brand`；
+- 代码生成器支持两种模式，一种生成单表的代码，比如只生成 `pms_brand` 表代码可以先输入 `pms`，后输入 `pms_brand`；
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_04.png)
+![](images/hamster_start_04.png)
 
 - 生成代码结构一览；
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_05.png)
+![](images/hamster_start_05.png)
 
 - 另一种直接生成整个模块的代码，比如生成`pms`模块代码可以先输入`pms`，后输入`pms_*`。
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_06.png)
+![](images/hamster_start_06.png)
 
 #### 编写业务代码
 
 ##### 单表查询
 
-> 由于MyBatis-Plus提供的增强功能相当强大，单表查询几乎不用手写SQL，直接使用ServiceImpl和BaseMapper中提供的方法即可。
+> 由于 MyBatis-Plus 提供的增强功能相当强大，单表查询几乎不用手写SQL，直接使用 ServiceImpl 和 BaseMapper 中提供的方法即可。
 
 比如我们的菜单管理业务实现类`UmsMenuServiceImpl`中的方法都直接使用了这些方法。
 
 ```java
 /**
- * 后台菜单管理Service实现类
- * Created by macro on 2020/2/2.
+ * 后台菜单管理 Service 实现类
+ * Created by superhsc on 2020/2/2.
  */
 @Service
 public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implements UmsMenuService {
@@ -192,7 +190,7 @@ public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implem
 
 ##### 分页查询
 
-> 对于分页查询MyBatis-Plus原生支持，不需要再整合其他插件，直接构造Page对象，然后调用ServiceImpl中的page方法即可。
+> 对于分页查询 MyBatis-Plus 原生支持，不需要再整合其他插件，直接构造Page对象，然后调用ServiceImpl中的page方法即可。
 
 ```java
 /**
@@ -214,7 +212,7 @@ public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implem
 
 ##### 多表查询
 
-> 对于多表查询，我们需要手写mapper.xml中的SQL实现，由于之前我们已经生成了mapper.xml文件，所以我们直接在Mapper接口中定义好方法，然后在mapper.xml写好SQL实现即可。
+> 对于多表查询，我们需要手写 mapper.xml 中的SQL实现，由于之前我们已经生成了 mapper.xml 文件，所以我们直接在 Mapper 接口中定义好方法，然后在 mapper.xml 写好SQL实现即可。
 
 - 比如说我们需要写一个根据用户ID获取其分配的菜单的方法，首先我们在`UmsMenuMapper`接口中添加好`getMenuList`方法；
 
@@ -242,53 +240,53 @@ public interface UmsMenuMapper extends BaseMapper<UmsMenu> {
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.macro.mall.tiny.modules.ums.mapper.UmsMenuMapper">
+<mapper namespace="cn.happymaya.hamster.modules.ums.mapper.UmsMenuMapper">
 
-    <select id="getMenuList" resultType="com.macro.mall.tiny.modules.ums.model.UmsMenu">
+    <select id="getMenuList" resultType="cn.happymaya.hamster.modules.ums.model.UmsMenu">
         SELECT
-            m.id id,
-            m.parent_id parentId,
-            m.create_time createTime,
-            m.title title,
-            m.level level,
-            m.sort sort,
-            m.name name,
-            m.icon icon,
-            m.hidden hidden
+        m.id id,
+        m.parent_id parentId,
+        m.create_time createTime,
+        m.title title,
+        m.level level,
+        m.sort sort,
+        m.name name,
+        m.icon icon,
+        m.hidden hidden
         FROM
-            ums_admin_role_relation arr
-                LEFT JOIN ums_role r ON arr.role_id = r.id
-                LEFT JOIN ums_role_menu_relation rmr ON r.id = rmr.role_id
-                LEFT JOIN ums_menu m ON rmr.menu_id = m.id
+        ums_admin_role_relation arr
+        LEFT JOIN ums_role r ON arr.role_id = r.id
+        LEFT JOIN ums_role_menu_relation rmr ON r.id = rmr.role_id
+        LEFT JOIN ums_menu m ON rmr.menu_id = m.id
         WHERE
-            arr.admin_id = #{adminId}
-          AND m.id IS NOT NULL
+        arr.admin_id = #{adminId}
+        AND m.id IS NOT NULL
         GROUP BY
-            m.id
+        m.id
     </select>
-    
+
 </mapper>
 ```
 
 ### 项目部署
 
-mall-tiny已经集成了Docker插件，可以打包成Docker镜像来部署，具体参考：[使用Maven插件为SpringBoot应用构建Docker镜像](https://mp.weixin.qq.com/s/q2KDzHbPkf3Q0EY8qYjYgw)
+hamster 已经集成了 Docker 插件，可以打包成 Docker 镜像来部署，具体参考：[使用 Maven 插件为 SpringBoot 应用构建 Docker 镜像](https://mp.weixin.qq.com/s/q2KDzHbPkf3Q0EY8qYjYgw)
 
 ### 其他说明
 
-#### SpringSecurity相关
+#### SpringSecurity 相关
 
-> 由于使用了SpringSecurity来实现认证和授权，部分接口需要token才可以访问，访问需要认证授权接口流程如下。
+> 由于使用了 SpringSecurity 来实现认证和授权，部分接口需要 token 才可以访问，访问需要认证授权接口流程如下。
 
-- 访问Swagger-UI接口文档：http://localhost:8080/swagger-ui.html
+- 访问 Swagger-UI 接口文档：http://localhost:8080/swagger-ui.html
 
 - 调用登录接口获取token；
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_07.png)
+![](images/hamster_start_07.png)
 
-- 点击右上角Authorize按钮输入token，然后访问相关接口即可。
+- 点击右上角 Authorize 按钮输入 token，然后访问相关接口即可。
 
-![](http://img.macrozheng.com/mall/project/mall_tiny_start_08.png)
+![](images/hamster_start_08.png)
 
 #### 请求参数校验
 
@@ -340,14 +338,6 @@ public class UmsAdminController {
     }
 }
 ```
-
-## 公众号
-
-学习不走弯路，关注公众号「**macrozheng**」，回复「**学习路线**」，获取mall项目专属学习路线！
-
-加微信群交流，公众号后台回复「**加群**」即可。
-
-![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
 
 ## 许可证
 
