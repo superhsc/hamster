@@ -7,7 +7,7 @@
 
 ## 简介
 
-hamster 是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接 Vue 前端，开箱即用。
+hamster 是一款基于 SpringBoot+MyBatis-Plus 的快速开发脚手架，拥有完整的权限管理功能，可对接 Vue 前端，开箱即用。
 
 ## 项目演示
 
