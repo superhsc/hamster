@@ -2,7 +2,7 @@
 
 <p>
     <a href="https://github.com/superhsc/hamster"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
-    <a href="https://github.com/superhsc/mall-admin-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-mall--admin--web-green.svg" alt="前端项目"></a>
+    <a href="https://github.com/superhsc/hamster-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-mall--admin--web-green.svg" alt="前端项目"></a>
 </p>
 
 ## 简介
@@ -11,7 +11,7 @@ hamster 是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有�
 
 ## 项目演示
 
-hamster 项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
+hamster 项目可无缝对接`hamster-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/superhsc/hamster-web
 
 ![](images/hamster_start_09.png)
 
