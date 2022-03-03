@@ -6,10 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import cn.happymaya.hamster.modules.ums.model.UmsResource;
 
 /**
- * 后台资源管理Service
- * Created by macro on 2020/2/2.
+ * 后台资源管理 Service
+ * Created by superhsc on 2020/2/2.
  */
-public interface UmsResourceService extends IService<UmsResource> {
+public interface IUmsResourceService extends IService<UmsResource> {
     /**
      * 添加资源
      */

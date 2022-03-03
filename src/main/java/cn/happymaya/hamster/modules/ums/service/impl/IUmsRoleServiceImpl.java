@@ -1,13 +1,13 @@
 package cn.happymaya.hamster.modules.ums.service.impl;
 
-import cn.happymaya.hamster.modules.ums.mapper.UmsMenuMapper;
-import cn.happymaya.hamster.modules.ums.mapper.UmsResourceMapper;
-import cn.happymaya.hamster.modules.ums.mapper.UmsRoleMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsMenuMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsResourceMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsRoleMapper;
 import cn.happymaya.hamster.modules.ums.model.*;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminCacheService;
-import cn.happymaya.hamster.modules.ums.service.UmsRoleMenuRelationService;
-import cn.happymaya.hamster.modules.ums.service.UmsRoleResourceRelationService;
-import cn.happymaya.hamster.modules.ums.service.UmsRoleService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminCacheService;
+import cn.happymaya.hamster.modules.ums.service.IUmsRoleMenuRelationService;
+import cn.happymaya.hamster.modules.ums.service.IUmsRoleResourceRelationService;
+import cn.happymaya.hamster.modules.ums.service.IUmsRoleService;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -23,20 +23,20 @@ import java.util.List;
 
 /**
  * 后台角色管理Service实现类
- * Created by macro on 2018/9/30.
+ * Created by superhsc on 2018/9/30.
  */
 @Service
-public class UmsRoleServiceImpl extends ServiceImpl<UmsRoleMapper, UmsRole>implements UmsRoleService {
+public class IUmsRoleServiceImpl extends ServiceImpl<IUmsRoleMapper, UmsRole>implements IUmsRoleService {
     @Autowired
-    private UmsAdminCacheService adminCacheService;
+    private IUmsAdminCacheService adminCacheService;
     @Autowired
-    private UmsRoleMenuRelationService roleMenuRelationService;
+    private IUmsRoleMenuRelationService roleMenuRelationService;
     @Autowired
-    private UmsRoleResourceRelationService roleResourceRelationService;
+    private IUmsRoleResourceRelationService roleResourceRelationService;
     @Autowired
-    private UmsMenuMapper menuMapper;
+    private IUmsMenuMapper menuMapper;
     @Autowired
-    private UmsResourceMapper resourceMapper;
+    private IUmsResourceMapper resourceMapper;
     @Override
     public boolean create(UmsRole role) {
         role.setCreateTime(new Date());

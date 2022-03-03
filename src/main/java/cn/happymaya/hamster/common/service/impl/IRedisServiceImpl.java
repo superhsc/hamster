@@ -1,6 +1,6 @@
 package cn.happymaya.hamster.common.service.impl;
 
-import cn.happymaya.hamster.common.service.RedisService;
+import cn.happymaya.hamster.common.service.IRedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -10,10 +10,10 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * redis操作实现类
- * Created by macro on 2020/3/3.
+ * redis 操作实现类
+ * Created by superhsc on 2020/3/3.
  */
-public class RedisServiceImpl implements RedisService {
+public class IRedisServiceImpl implements IRedisService {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 

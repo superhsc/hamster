@@ -1,7 +1,7 @@
 package cn.happymaya.hamster.modules.ums.service.impl;
 
-import cn.happymaya.hamster.modules.ums.mapper.UmsResourceCategoryMapper;
-import cn.happymaya.hamster.modules.ums.service.UmsResourceCategoryService;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsResourceCategoryMapper;
+import cn.happymaya.hamster.modules.ums.service.IUmsResourceCategoryService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import cn.happymaya.hamster.modules.ums.model.UmsResourceCategory;
@@ -12,10 +12,10 @@ import java.util.List;
 
 /**
  * 后台资源分类管理Service实现类
- * Created by macro on 2020/2/5.
+ * Created by superhsc on 2020/2/5.
  */
 @Service
-public class UmsResourceCategoryServiceImpl extends ServiceImpl<UmsResourceCategoryMapper,UmsResourceCategory> implements UmsResourceCategoryService {
+public class IUmsResourceCategoryServiceImpl extends ServiceImpl<IUmsResourceCategoryMapper,UmsResourceCategory> implements IUmsResourceCategoryService {
 
     @Override
     public List<UmsResourceCategory> listAll() {

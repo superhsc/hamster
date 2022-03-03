@@ -240,7 +240,7 @@ public interface UmsMenuMapper extends BaseMapper<UmsMenu> {
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.happymaya.hamster.modules.ums.mapper.UmsMenuMapper">
+<mapper namespace="cn.happymaya.hamster.modules.ums.mapper.IUmsMenuMapper">
 
     <select id="getMenuList" resultType="cn.happymaya.hamster.modules.ums.model.UmsMenu">
         SELECT

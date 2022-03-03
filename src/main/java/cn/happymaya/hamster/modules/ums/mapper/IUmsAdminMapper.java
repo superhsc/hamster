@@ -11,10 +11,10 @@ import java.util.List;
  * 后台用户表 Mapper 接口
  * </p>
  *
- * @author macro
+ * @author superhsc
  * @since 2020-08-21
  */
-public interface UmsAdminMapper extends BaseMapper<UmsAdmin> {
+public interface IUmsAdminMapper extends BaseMapper<UmsAdmin> {
 
     /**
      * 获取资源相关用户ID列表

@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
  * 后台用户和角色关系表
  * </p>
  *
- * @author macro
+ * @author superhsc
  * @since 2020-08-21
  */
 @Data

@@ -8,10 +8,10 @@ import cn.happymaya.hamster.modules.ums.model.UmsResource;
 import java.util.List;
 
 /**
- * 后台用户缓存管理Service
- * Created by macro on 2020/3/13.
+ * 后台用户缓存管理 Service
+ * Created by superhsc on 2020/3/13.
  */
-public interface UmsAdminCacheService {
+public interface IUmsAdminCacheService {
     /**
      * 删除后台用户缓存
      */

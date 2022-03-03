@@ -11,10 +11,10 @@ import java.util.List;
  * 后台资源表 Mapper 接口
  * </p>
  *
- * @author macro
+ * @author superhsc
  * @since 2020-08-21
  */
-public interface UmsResourceMapper extends BaseMapper<UmsResource> {
+public interface IUmsResourceMapper extends BaseMapper<UmsResource> {
 
     /**
      * 获取用户所有可访问资源

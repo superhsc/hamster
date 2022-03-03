@@ -2,7 +2,7 @@ package cn.happymaya.hamster.modules.ums.controller;
 
 import cn.happymaya.hamster.common.api.CommonPage;
 import cn.happymaya.hamster.common.api.CommonResult;
-import cn.happymaya.hamster.modules.ums.service.UmsRoleService;
+import cn.happymaya.hamster.modules.ums.service.IUmsRoleService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import cn.happymaya.hamster.modules.ums.model.UmsMenu;
 import cn.happymaya.hamster.modules.ums.model.UmsResource;
@@ -17,14 +17,14 @@ import java.util.List;
 
 /**
  * 后台用户角色管理
- * Created by macro on 2018/9/30.
+ * Created by superhsc on 2018/9/30.
  */
 @Controller
 @Api(tags = "UmsRoleController", description = "后台用户角色管理")
 @RequestMapping("/role")
 public class UmsRoleController {
     @Autowired
-    private UmsRoleService roleService;
+    private IUmsRoleService roleService;
 
     @ApiOperation("添加角色")
     @RequestMapping(value = "/create", method = RequestMethod.POST)

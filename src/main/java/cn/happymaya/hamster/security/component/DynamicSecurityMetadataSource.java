@@ -19,11 +19,11 @@ public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMe
 
     private static Map<String, ConfigAttribute> configAttributeMap = null;
     @Autowired
-    private DynamicSecurityService dynamicSecurityService;
+    private IDynamicSecurityService IDynamicSecurityService;
 
     @PostConstruct
     public void loadDataSource() {
-        configAttributeMap = dynamicSecurityService.loadDataSource();
+        configAttributeMap = IDynamicSecurityService.loadDataSource();
     }
 
     public void clearDataSource() {

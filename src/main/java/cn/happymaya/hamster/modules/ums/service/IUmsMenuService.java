@@ -9,10 +9,10 @@ import cn.happymaya.hamster.modules.ums.model.UmsMenu;
 import java.util.List;
 
 /**
- * 后台菜单管理Service
- * Created by macro on 2020/2/2.
+ * 后台菜单管理 Service
+ * Created by superhsc on 2020/2/2.
  */
-public interface UmsMenuService extends IService<UmsMenu> {
+public interface IUmsMenuService extends IService<UmsMenu> {
     /**
      * 创建后台菜单
      */

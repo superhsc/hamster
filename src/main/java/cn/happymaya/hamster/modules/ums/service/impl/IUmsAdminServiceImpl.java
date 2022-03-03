@@ -1,12 +1,12 @@
 package cn.happymaya.hamster.modules.ums.service.impl;
 
-import cn.happymaya.hamster.modules.ums.mapper.UmsAdminMapper;
-import cn.happymaya.hamster.modules.ums.mapper.UmsResourceMapper;
-import cn.happymaya.hamster.modules.ums.mapper.UmsRoleMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsAdminMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsResourceMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsRoleMapper;
 import cn.happymaya.hamster.modules.ums.model.*;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminCacheService;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminRoleRelationService;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminCacheService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminRoleRelationService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminService;
 import cn.happymaya.hamster.security.util.JwtTokenUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
@@ -18,7 +18,7 @@ import cn.happymaya.hamster.common.exception.Asserts;
 import cn.happymaya.hamster.domain.AdminUserDetails;
 import cn.happymaya.hamster.modules.ums.dto.UmsAdminParam;
 import cn.happymaya.hamster.modules.ums.dto.UpdateAdminPasswordParam;
-import cn.happymaya.hamster.modules.ums.mapper.UmsAdminLoginLogMapper;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsAdminLoginLogMapper;
 //import com.macro.mall.tiny.modules.ums.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,25 +42,25 @@ import java.util.List;
 
 /**
  * 后台管理员管理Service实现类
- * Created by macro on 2018/4/26.
+ * Created by superhsc on 2018/4/26.
  */
 @Service
-public class UmsAdminServiceImpl extends ServiceImpl<UmsAdminMapper, UmsAdmin> implements UmsAdminService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
+public class IUmsAdminServiceImpl extends ServiceImpl<IUmsAdminMapper, UmsAdmin> implements IUmsAdminService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(IUmsAdminServiceImpl.class);
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
-    private UmsAdminLoginLogMapper loginLogMapper;
+    private IUmsAdminLoginLogMapper loginLogMapper;
     @Autowired
-    private UmsAdminCacheService adminCacheService;
+    private IUmsAdminCacheService adminCacheService;
     @Autowired
-    private UmsAdminRoleRelationService adminRoleRelationService;
+    private IUmsAdminRoleRelationService adminRoleRelationService;
     @Autowired
-    private UmsRoleMapper roleMapper;
+    private IUmsRoleMapper roleMapper;
     @Autowired
-    private UmsResourceMapper resourceMapper;
+    private IUmsResourceMapper resourceMapper;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {

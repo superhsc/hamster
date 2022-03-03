@@ -1,8 +1,8 @@
 package cn.happymaya.hamster.modules.ums.service.impl;
 
-import cn.happymaya.hamster.modules.ums.mapper.UmsResourceMapper;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminCacheService;
-import cn.happymaya.hamster.modules.ums.service.UmsResourceService;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsResourceMapper;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminCacheService;
+import cn.happymaya.hamster.modules.ums.service.IUmsResourceService;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -16,12 +16,12 @@ import java.util.Date;
 
 /**
  * 后台资源管理Service实现类
- * Created by macro on 2020/2/2.
+ * Created by superhsc on 2020/2/2.
  */
 @Service
-public class UmsResourceServiceImpl extends ServiceImpl<UmsResourceMapper,UmsResource>implements UmsResourceService {
+public class IUmsResourceServiceImpl extends ServiceImpl<IUmsResourceMapper,UmsResource>implements IUmsResourceService {
     @Autowired
-    private UmsAdminCacheService adminCacheService;
+    private IUmsAdminCacheService adminCacheService;
     @Override
     public boolean create(UmsResource umsResource) {
         umsResource.setCreateTime(new Date());

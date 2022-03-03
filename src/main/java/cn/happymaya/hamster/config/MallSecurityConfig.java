@@ -1,8 +1,8 @@
 package cn.happymaya.hamster.config;
 
-import cn.happymaya.hamster.modules.ums.service.UmsAdminService;
-import cn.happymaya.hamster.modules.ums.service.UmsResourceService;
-import cn.happymaya.hamster.security.component.DynamicSecurityService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminService;
+import cn.happymaya.hamster.modules.ums.service.IUmsResourceService;
+import cn.happymaya.hamster.security.component.IDynamicSecurityService;
 import cn.happymaya.hamster.security.config.SecurityConfig;
 import cn.happymaya.hamster.modules.ums.model.UmsResource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +18,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * mall-security模块相关配置
- * Created by macro on 2019/11/9.
+ * hamster-security 模块相关配置
+ * Created by superhsc on 2019/11/9.
  */
 @Configuration
 @EnableWebSecurity
@@ -27,9 +27,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MallSecurityConfig extends SecurityConfig {
 
     @Autowired
-    private UmsAdminService adminService;
+    private IUmsAdminService adminService;
     @Autowired
-    private UmsResourceService resourceService;
+    private IUmsResourceService resourceService;
 
     @Bean
     public UserDetailsService userDetailsService() {
@@ -38,8 +38,8 @@ public class MallSecurityConfig extends SecurityConfig {
     }
 
     @Bean
-    public DynamicSecurityService dynamicSecurityService() {
-        return new DynamicSecurityService() {
+    public IDynamicSecurityService dynamicSecurityService() {
+        return new IDynamicSecurityService() {
             @Override
             public Map<String, ConfigAttribute> loadDataSource() {
                 Map<String, ConfigAttribute> map = new ConcurrentHashMap<>();

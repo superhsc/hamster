@@ -1,7 +1,7 @@
 package cn.happymaya.hamster.modules.ums.controller;
 
 import cn.happymaya.hamster.common.api.CommonResult;
-import cn.happymaya.hamster.modules.ums.service.UmsResourceCategoryService;
+import cn.happymaya.hamster.modules.ums.service.IUmsResourceCategoryService;
 import cn.happymaya.hamster.modules.ums.model.UmsResourceCategory;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 后台资源分类管理Controller
- * Created by macro on 2020/2/5.
+ * 后台资源分类管理 Controller
+ * Created by superhsc on 2020/2/5.
  */
 @Controller
 @Api(tags = "UmsResourceCategoryController", description = "后台资源分类管理")
 @RequestMapping("/resourceCategory")
 public class UmsResourceCategoryController {
     @Autowired
-    private UmsResourceCategoryService resourceCategoryService;
+    private IUmsResourceCategoryService resourceCategoryService;
 
     @ApiOperation("查询所有后台资源分类")
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)

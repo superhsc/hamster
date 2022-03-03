@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
-import cn.happymaya.hamster.common.service.RedisService;
-import cn.happymaya.hamster.common.service.impl.RedisServiceImpl;
+import cn.happymaya.hamster.common.service.IRedisService;
+import cn.happymaya.hamster.common.service.impl.IRedisServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -21,7 +21,7 @@ import java.time.Duration;
 
 /**
  * Redis基础配置
- * Created by macro on 2020/6/19.
+ * Created by superhsc on 2020/6/19.
  */
 public class BaseRedisConfig {
 
@@ -61,8 +61,8 @@ public class BaseRedisConfig {
 
 
     @Bean
-    public RedisService redisService(){
-        return new RedisServiceImpl();
+    public IRedisService redisService(){
+        return new IRedisServiceImpl();
     }
 
 }

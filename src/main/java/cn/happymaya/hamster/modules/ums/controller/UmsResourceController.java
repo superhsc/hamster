@@ -2,7 +2,7 @@ package cn.happymaya.hamster.modules.ums.controller;
 
 import cn.happymaya.hamster.common.api.CommonPage;
 import cn.happymaya.hamster.common.api.CommonResult;
-import cn.happymaya.hamster.modules.ums.service.UmsResourceService;
+import cn.happymaya.hamster.modules.ums.service.IUmsResourceService;
 import cn.happymaya.hamster.security.component.DynamicSecurityMetadataSource;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import cn.happymaya.hamster.modules.ums.model.UmsResource;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 后台资源管理Controller
- * Created by macro on 2020/2/4.
+ * 后台资源管理 Controller
+ * Created by superhsc on 2020/2/4.
  */
 @Controller
 @Api(tags = "UmsResourceController", description = "后台资源管理")
@@ -24,16 +24,16 @@ import java.util.List;
 public class UmsResourceController {
 
     @Autowired
-    private UmsResourceService resourceService;
+    private IUmsResourceService resourceService;
     @Autowired
-    private DynamicSecurityMetadataSource dynamicSecurityMetadataSource;
+    private DynamicSecurityMetadataSource DynamicSecurityMetadataSource;
 
     @ApiOperation("添加后台资源")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult create(@RequestBody UmsResource umsResource) {
         boolean success = resourceService.create(umsResource);
-        dynamicSecurityMetadataSource.clearDataSource();
+        DynamicSecurityMetadataSource.clearDataSource();
         if (success) {
             return CommonResult.success(null);
         } else {
@@ -47,7 +47,7 @@ public class UmsResourceController {
     public CommonResult update(@PathVariable Long id,
                                @RequestBody UmsResource umsResource) {
         boolean success = resourceService.update(id, umsResource);
-        dynamicSecurityMetadataSource.clearDataSource();
+        DynamicSecurityMetadataSource.clearDataSource();
         if (success) {
             return CommonResult.success(null);
         } else {
@@ -68,7 +68,7 @@ public class UmsResourceController {
     @ResponseBody
     public CommonResult delete(@PathVariable Long id) {
         boolean success = resourceService.delete(id);
-        dynamicSecurityMetadataSource.clearDataSource();
+        DynamicSecurityMetadataSource.clearDataSource();
         if (success) {
             return CommonResult.success(null);
         } else {

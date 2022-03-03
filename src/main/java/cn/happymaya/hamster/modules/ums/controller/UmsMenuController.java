@@ -2,7 +2,7 @@ package cn.happymaya.hamster.modules.ums.controller;
 
 import cn.happymaya.hamster.common.api.CommonPage;
 import cn.happymaya.hamster.common.api.CommonResult;
-import cn.happymaya.hamster.modules.ums.service.UmsMenuService;
+import cn.happymaya.hamster.modules.ums.service.IUmsMenuService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import cn.happymaya.hamster.modules.ums.dto.UmsMenuNode;
 import cn.happymaya.hamster.modules.ums.model.UmsMenu;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 后台菜单管理Controller
- * Created by macro on 2020/2/4.
+ * 后台菜单管理 Controller
+ * Created by superhsc on 2020/2/4.
  */
 @Controller
 @Api(tags = "UmsMenuController", description = "后台菜单管理")
@@ -24,7 +24,7 @@ import java.util.List;
 public class UmsMenuController {
 
     @Autowired
-    private UmsMenuService menuService;
+    private IUmsMenuService menuService;
 
     @ApiOperation("添加后台菜单")
     @RequestMapping(value = "/create", method = RequestMethod.POST)

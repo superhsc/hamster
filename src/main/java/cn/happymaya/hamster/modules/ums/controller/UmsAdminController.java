@@ -2,8 +2,8 @@ package cn.happymaya.hamster.modules.ums.controller;
 
 import cn.happymaya.hamster.common.api.CommonPage;
 import cn.happymaya.hamster.common.api.CommonResult;
-import cn.happymaya.hamster.modules.ums.service.UmsAdminService;
-import cn.happymaya.hamster.modules.ums.service.UmsRoleService;
+import cn.happymaya.hamster.modules.ums.service.IUmsAdminService;
+import cn.happymaya.hamster.modules.ums.service.IUmsRoleService;
 import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import cn.happymaya.hamster.modules.ums.dto.UmsAdminLoginParam;
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 
 /**
  * 后台用户管理
- * Created by macro on 2018/4/26.
+ * Created by superhsc on 2018/4/26.
  */
 @Controller
 @Api(tags = "UmsAdminController", description = "后台用户管理")
@@ -39,9 +39,9 @@ public class UmsAdminController {
     @Value("${jwt.tokenHead}")
     private String tokenHead;
     @Autowired
-    private UmsAdminService adminService;
+    private IUmsAdminService adminService;
     @Autowired
-    private UmsRoleService roleService;
+    private IUmsRoleService roleService;
 
     @ApiOperation(value = "用户注册")
     @RequestMapping(value = "/register", method = RequestMethod.POST)

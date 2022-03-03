@@ -1,7 +1,7 @@
 package cn.happymaya.hamster.modules.ums.service.impl;
 
-import cn.happymaya.hamster.modules.ums.mapper.UmsMenuMapper;
-import cn.happymaya.hamster.modules.ums.service.UmsMenuService;
+import cn.happymaya.hamster.modules.ums.mapper.IUmsMenuMapper;
+import cn.happymaya.hamster.modules.ums.service.IUmsMenuService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -16,10 +16,10 @@ import java.util.stream.Collectors;
 
 /**
  * 后台菜单管理Service实现类
- * Created by macro on 2020/2/2.
+ * Created by superhsc on 2020/2/2.
  */
 @Service
-public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implements UmsMenuService {
+public class IUmsMenuServiceImpl extends ServiceImpl<IUmsMenuMapper,UmsMenu>implements IUmsMenuService {
 
     @Override
     public boolean create(UmsMenu umsMenu) {

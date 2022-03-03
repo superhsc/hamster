@@ -21,13 +21,13 @@ import java.io.IOException;
 public class DynamicSecurityFilter extends AbstractSecurityInterceptor implements Filter {
 
     @Autowired
-    private DynamicSecurityMetadataSource dynamicSecurityMetadataSource;
+    private DynamicSecurityMetadataSource DynamicSecurityMetadataSource;
     @Autowired
     private IgnoreUrlsConfig ignoreUrlsConfig;
 
     @Autowired
-    public void setMyAccessDecisionManager(DynamicAccessDecisionManager dynamicAccessDecisionManager) {
-        super.setAccessDecisionManager(dynamicAccessDecisionManager);
+    public void setMyAccessDecisionManager(DynamicAccessDecisionManager DynamicAccessDecisionManager) {
+        super.setAccessDecisionManager(DynamicAccessDecisionManager);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class DynamicSecurityFilter extends AbstractSecurityInterceptor implement
 
     @Override
     public SecurityMetadataSource obtainSecurityMetadataSource() {
-        return dynamicSecurityMetadataSource;
+        return DynamicSecurityMetadataSource;
     }
 
 }

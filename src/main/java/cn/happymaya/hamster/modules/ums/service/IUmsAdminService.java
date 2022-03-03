@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * 后台管理员管理Service
- * Created by macro on 2018/4/26.
+ * 后台管理员管理 Service
+ * Created by superhsc on 2018/4/26.
  */
-public interface UmsAdminService extends IService<UmsAdmin> {
+public interface IUmsAdminService extends IService<UmsAdmin> {
     /**
      * 根据用户名获取后台管理员
      */

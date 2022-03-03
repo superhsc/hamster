@@ -7,10 +7,10 @@ import cn.happymaya.hamster.modules.ums.model.UmsResourceCategory;
 import java.util.List;
 
 /**
- * 后台资源分类管理Service
- * Created by macro on 2020/2/5.
+ * 后台资源分类管理 Service
+ * Created by superhsc on 2020/2/5.
  */
-public interface UmsResourceCategoryService extends IService<UmsResourceCategory> {
+public interface IUmsResourceCategoryService extends IService<UmsResourceCategory> {
 
     /**
      * 获取所有资源分类

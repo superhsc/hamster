@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 后台用户和角色关系表 Mapper 接口
  * </p>
  *
- * @author macro
+ * @author superhsc
  * @since 2020-08-21
  */
-public interface UmsAdminRoleRelationMapper extends BaseMapper<UmsAdminRoleRelation> {
+public interface IUmsAdminRoleRelationMapper extends BaseMapper<UmsAdminRoleRelation> {
 
 }
