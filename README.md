@@ -1,4 +1,4 @@
-# mall-tiny
+# hamster
 
 <p>
     <a href="https://github.com/superhsc/hamster"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
